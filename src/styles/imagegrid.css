@@ -1,0 +1,22 @@
+.grid-image {
+  grid-area: c;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 1em;
+  justify-content: center;
+  margin: 2% 5%;
+}
+
+.grid-image__item {
+  height: 15em;
+  object-fit: cover;
+  width: 100%;
+  cursor: pointer;
+  filter: blur(0px);
+  transition: all 0.3s ease-in;
+}
+
+.grid-image__item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}

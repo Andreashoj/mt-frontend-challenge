@@ -1,0 +1,15 @@
+.navigation {
+  grid-area: n;
+  background-color: #0a1826;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+}
+
+.navigation__link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin-right: 5%;
+}

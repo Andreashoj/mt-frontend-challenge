@@ -1,0 +1,45 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  background-color: black;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.modal-image {
+  height: 80%;
+  object-fit: cover;
+}
+
+.close {
+  height: 64px;
+  width: 64px;
+  position: absolute;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.close:hover {
+  transform: scale(1.1);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
