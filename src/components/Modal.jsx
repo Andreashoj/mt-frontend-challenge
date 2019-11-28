@@ -9,8 +9,15 @@ const Modal = ({ show, data, setModal }) => {
 
   return (
     <div className={ShowHideClass}>
-      <img className="modal-image" src={data.download_url} alt="" />
-      <img className="close" src={close} onClick={() => setModal(false)} />
+      <div className="modal-container">
+        <img className="modal-image" src={data.download_url} alt="" />
+        <img
+          className="close"
+          src={close}
+          onClick={() => setModal(false)}
+          alt=""
+        />
+      </div>
       <div className="background" onClick={() => setModal(false)}></div>
     </div>
   );
