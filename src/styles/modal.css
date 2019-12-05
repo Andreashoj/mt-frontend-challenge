@@ -1,5 +1,5 @@
 .modal {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .background {
@@ -53,4 +54,67 @@
 
 .show {
   display: flex;
+  position: fixed;
+}
+
+.image__container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.info-modal {
+  position: absolute;
+  background: #119da4;
+  color: white;
+  height: 50px;
+  width: 50px;
+  bottom: 20px;
+  right: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-image: url("../icons/info_white.svg");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.info-modal:hover {
+  transform: scale(1.2);
+}
+
+.show-info {
+  height: 100%;
+  width: 30%;
+  border-radius: 0;
+  bottom: 0;
+  right: 0;
+  background-image: none;
+}
+
+.show-info:hover {
+  transform: none;
+}
+
+.info-modal__container {
+  padding: 20px;
+  animation-name: info-content;
+  animation-duration: 1s;
+}
+
+@media screen and (max-width: 1000px) {
+  .show-info {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes info-content {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

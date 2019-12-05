@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/navigation.css";
 
 const Navigation = () => {
   return (
     <nav className="navigation">
-      <a href="www.github.com/Andreashoj" className="navigation__link">
+      <a
+        target="_blank"
+        href="https://www.github.com/Andreashoj"
+        className="navigation__link"
+      >
         Github
       </a>
     </nav>

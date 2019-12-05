@@ -8,11 +8,14 @@ const ImageGrid = ({ setSpinner }) => {
   const [modalData, setModalData] = useState();
 
   useEffect(() => {
-    fetch("https://picsum.photos/v2/list?limit=6")
+    // Hide Key
+    fetch(
+      "https://api.unsplash.com/photos/?client_id=4c2cde9d8978a0102f79c14a5de80a843a9c6859959dfe6c835bde8a53eae073"
+    )
       .then(res => res.json())
-      .then(data => setImages(data))
       // setTimeout is there just to show that the spinner is actually there
-      .then(() => setTimeout(() => setSpinner(false), 500));
+      .then(data => setTimeout(() => setImages(data), 1000))
+      .then(setTimeout(() => setSpinner(false), 1000));
   }, [setSpinner]);
 
   const handleModal = item => {
@@ -22,14 +25,14 @@ const ImageGrid = ({ setSpinner }) => {
 
   return (
     <div className="grid-image">
-      {images.map(item => {
+      {images.map(image => {
         return (
           <img
             className="grid-image__item"
-            src={item.download_url}
-            alt={"image by: " + item.author}
-            key={item.id}
-            onClick={() => handleModal(item)}
+            src={image.urls.regular}
+            alt={"image by: " + image.user.username}
+            key={image.id}
+            onClick={() => handleModal(image)}
           />
         );
       })}
