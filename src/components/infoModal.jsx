@@ -18,6 +18,7 @@ const InfoModal = ({ data }) => {
               Find more at my instagram @
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href={`https://www.instagram.com/${data.instagram_username}`}
               >
                 {data.instagram_username}

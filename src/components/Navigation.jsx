@@ -6,6 +6,7 @@ const Navigation = () => {
     <nav className="navigation">
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://www.github.com/Andreashoj"
         className="navigation__link"
       >
