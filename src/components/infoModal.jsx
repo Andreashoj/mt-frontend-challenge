@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
 const InfoModal = ({ data }) => {
+  // If info modal is clicked, a class is set (same princip as the parent modal)
   const [infoModal, setInfoModal] = useState(false);
   const ShowHideinfo = infoModal ? "show-info" : "";
 
+  // Constructs info modal based off the passed down props
   return (
     <>
       <div
