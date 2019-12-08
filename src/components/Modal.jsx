@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/modal.css";
 import close from "../icons/close.svg";
-import InfoModal from "./InfoModal";
+import InfoModal from "./infoModal";
 
 const Modal = ({ show, data, setModal }) => {
   // Makes modal visible based on the props that gets passed (if it's clicked or not)
